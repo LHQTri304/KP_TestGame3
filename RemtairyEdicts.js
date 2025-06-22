@@ -1169,7 +1169,8 @@ Game_Actor.prototype.edictsLevelOneRiotChance = function() {
 		}
 	}
 	
-	return chance;
+	//return chance;
+	return chance / 10; //make them less likely to riot
 };
 
 Game_Actor.prototype.edictsLevelTwoRiotChance = function() {
@@ -1224,7 +1225,8 @@ Game_Actor.prototype.edictsLevelTwoRiotChance = function() {
 	//Lizardman
 	if(Karryn.hasEdict(EDICT_SCIENCE_VERSUS_LIZARDMEN)) chance += 3 * edictsRate;
 	
-	return chance;
+	//return chance;
+	return chance / 10; //make them less likely to riot
 };
 
 Game_Actor.prototype.edictsLevelThreeRiotChance = function() {
@@ -1267,7 +1269,8 @@ Game_Actor.prototype.edictsLevelThreeRiotChance = function() {
 	//Orc
 	if(Karryn.hasEdict(EDICT_REJECT_THE_ORCS)) chance += 3 * edictsRate;
 	
-	return chance;
+	//return chance;
+	return chance / 10; //make them less likely to riot
 };
 
 Game_Actor.prototype.edictsLevelFourRiotChance = function() {
@@ -1276,7 +1279,8 @@ Game_Actor.prototype.edictsLevelFourRiotChance = function() {
 	if(Karryn.hasEdict(EDICT_NEGOTIATE_WITH_SUBJUGATED_INMATES)) edictsRate += 1;
 
 
-	return chance;
+	//return chance;
+	return chance / 10; //make them less likely to riot
 };
 
 ///////
