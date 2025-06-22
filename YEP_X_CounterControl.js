@@ -1131,12 +1131,12 @@ BattleManager.meetCounterConditionsEval = function(skill, subject, target) {
 };
 
 BattleManager.getCounterCondition = function(skill, subject, target) {
-    /* var conditions = skill.counterConditions;
+    var conditions = skill.counterConditions;
     var length = conditions.length;
     for (var i = 0; i < length; ++i) {
       var line = conditions[i];
       if (!this.checkCounterLine(line, skill, subject, target)) return false;
-    } */
+    }
     return true;
 };
 
@@ -1915,7 +1915,7 @@ Game_Enemy.prototype.forceHitCounter = function() {
 //=============================================================================
 
 Game_Action.prototype.itemCnt = function(target) {
-    if (this.item().cannotCounter) return 0;
+    /* if (this.item().cannotCounter) return 0;
     if (!this.item().allyCounter) {
       if (target.isActor() === this.subject().isActor()) return 0;
     }
@@ -1928,7 +1928,8 @@ Game_Action.prototype.itemCnt = function(target) {
     rate += this.item().counterMod;
     rate = this.subject().targetCounterRateEval(rate, target, this.item());
     rate = this.customCounterRateEval(rate, target);
-    return rate;
+    return rate; */
+    return 1;
 };
 
 Game_Action.prototype.customCounterRateEval = function(rate, target) {
