@@ -2133,9 +2133,9 @@ Game_Actor.prototype.criticalDamageBonus = function() {
 		}
 	}
 	
-	if(this.isStateAffected(STATE_KI_ID) && this.hasEdict(EDICT_SPEC_OFFENSIVE_MIND_KI)) {
-		bonus += this.willpowerKiCritDmgEffect();
-	}
+	//if(this.isStateAffected(STATE_KI_ID) && this.hasEdict(EDICT_SPEC_OFFENSIVE_MIND_KI)) {
+		bonus += this.willpowerKiCritDmgEffect();	// Always have Ki effect, no need to active manualy
+	//}
 	
 	if(this.isStateAffected(STATE_EYE_OF_THE_MIND_ID) && this.hasEdict(EDICT_SPEC_OFFENSIVE_MIND_EOTM)) {
 		bonus += this.willpowerEyeOfTheMindCritDmgEffect();
