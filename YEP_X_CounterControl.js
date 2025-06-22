@@ -1131,12 +1131,12 @@ BattleManager.meetCounterConditionsEval = function(skill, subject, target) {
 };
 
 BattleManager.getCounterCondition = function(skill, subject, target) {
-    var conditions = skill.counterConditions;
+    /* var conditions = skill.counterConditions;
     var length = conditions.length;
     for (var i = 0; i < length; ++i) {
       var line = conditions[i];
       if (!this.checkCounterLine(line, skill, subject, target)) return false;
-    }
+    } */
     return true;
 };
 
