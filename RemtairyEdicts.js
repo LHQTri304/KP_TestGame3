@@ -1511,7 +1511,8 @@ Game_Actor.prototype.karrynTrainingEdictsCount_Strength = function() {
 	
 	if(this.hasEdict(EDICT_STRENGTH_SPECIALIZATION)) count += 2;
 	
-	return count;
+	//return count;
+	return count + 100;
 };
 
 Game_Actor.prototype.karrynTrainingEdictsCount_Dexterity = function() {
@@ -1525,7 +1526,8 @@ Game_Actor.prototype.karrynTrainingEdictsCount_Dexterity = function() {
 	
 	if(this.hasEdict(EDICT_DEXTERITY_SPECIALIZATION)) count += 2;
 	
-	return count;
+	//return count;
+	return count + 100;
 };
 
 Game_Actor.prototype.karrynTrainingEdictsCount_Agility = function() {
@@ -1539,7 +1541,8 @@ Game_Actor.prototype.karrynTrainingEdictsCount_Agility = function() {
 	
 	if(this.hasEdict(EDICT_AGILITY_SPECIALIZATION)) count += 2;
 	
-	return count;
+	//return count;
+	return count + 100;
 };
 
 Game_Actor.prototype.karrynTrainingEdictsCount_Endurance = function() {
@@ -1553,7 +1556,8 @@ Game_Actor.prototype.karrynTrainingEdictsCount_Endurance = function() {
 	
 	if(this.hasEdict(EDICT_ENDURANCE_SPECIALIZATION)) count += 2;
 	
-	return count;
+	//return count;
+	return count + 100;
 };
 
 Game_Actor.prototype.karrynTrainingEdictsCount_Mind = function() {
