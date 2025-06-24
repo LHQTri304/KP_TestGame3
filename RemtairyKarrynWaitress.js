@@ -252,13 +252,13 @@ Game_Party.prototype.postWaitressBattleCleanup  = function() {
 	$gameSwitches.setValue(SWITCH_TODAY_WAITRESS_BATTLE_ID, true);
 	
 	if(this._waitressBattle_customerSatisfaction > 0) {
-		let addRep = 1;
+		let addRep = 10;
 		if($gameParty._barReputation <= 12 && Math.randomInt(100) < this._waitressBattle_customerSatisfaction) addRep++;
 		this.increaseBarReputation(addRep);
 		$gameSwitches.setValue(SWITCH_TODAY_BAR_REP_UP_ID, true);
 	}
 	else if(this._waitressBattle_customerSatisfaction < 0) {
-		let addRep = -1;
+		let addRep = -0;
 		if(Math.randomInt(100) < this._waitressBattle_customerSatisfaction * -1) addRep--;
 		this.increaseBarReputation(addRep);
 	}

@@ -356,19 +356,19 @@ Game_Party.prototype.postReceptionistBattleCleanup  = function() {
 	$gameTroop._goblins_distanceSlot = [ -1, false, false, false, false, false, false, false ];
 
 	if(this._receptionistBattle_visitorSatisfaction_general > 0) {
-		let addRep = 1;
+		let addRep = 10;
 		if($gameParty._receptionistSatisfaction <= 20 && Math.randomInt(100) < this._receptionistBattle_visitorSatisfaction_general) addRep++;
 		this.increaseReceptionistSatisfaction(addRep);
 		$gameSwitches.setValue(SWITCH_TODAY_RECEPTIONIST_SATISFACTION_RATE_UP_ID, true);
 	}
 	else if(this._receptionistBattle_visitorSatisfaction_general < 0) {
-		let addRep = -1;
+		let addRep = -0;
 		if(Math.randomInt(100) < this._receptionistBattle_visitorSatisfaction_general * -1) addRep--;
 		this.increaseReceptionistSatisfaction(addRep);
 	}
 	
 	if(this._receptionistBattle_visitorSatisfaction_fan > 0) {
-		let addRep = 1;
+		let addRep = 5;
 		if($gameParty._receptionistFame <= 15 && Math.randomInt(100) < this._receptionistBattle_visitorSatisfaction_fan) addRep++;
 		this.increaseReceptionistFame(addRep);
 		$gameSwitches.setValue(SWITCH_TODAY_RECEPTIONIST_FAME_UP_ID, true);
@@ -378,13 +378,13 @@ Game_Party.prototype.postReceptionistBattleCleanup  = function() {
 	}
 	
 	if(this._receptionistBattle_visitorSatisfaction_pervert + this._receptionistBattle_visitorSpottedNaughtyActs > 0) {
-		let addRep = 1;
+		let addRep = 5;
 		if($gameParty._receptionistNotoriety <= 15 && Math.randomInt(100) < this._receptionistBattle_visitorSatisfaction_pervert + this._receptionistBattle_visitorSpottedNaughtyActs) addRep++;
 		this.increaseReceptionistNotoriety(addRep);
 		$gameSwitches.setValue(SWITCH_TODAY_RECEPTIONIST_NOTORIETY_UP_ID, true);
 	}
 	else if(this._receptionistBattle_visitorSatisfaction_pervert + this._receptionistBattle_visitorSpottedNaughtyActs < 0) {
-		let addRep = -1;
+		let addRep = -0;
 		if(Math.randomInt(100) < (this._receptionistBattle_visitorSatisfaction_pervert + this._receptionistBattle_visitorSpottedNaughtyActs) * -1) addRep--;
 		this.increaseReceptionistNotoriety(addRep);
 	}

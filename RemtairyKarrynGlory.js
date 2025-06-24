@@ -122,13 +122,13 @@ Game_Party.prototype.postGloryBattleCleanup = function() {
 	$gameSwitches.setValue(SWITCH_TODAY_GLORYHOLE_BATTLE_ID, true);
 
 	if(this._gloryBattle_guestSatisfaction > 0) {
-		let addRep = 1;
+		let addRep = 10;
 		if(this._gloryReputation <= 10 && Math.randomInt(100) < this._gloryBattle_guestSatisfaction) addRep++;
 		this.increaseGloryReputation(addRep);
 		//$gameSwitches.setValue(SWITCH_TODAY_BAR_REP_UP_ID, true);
 	}
 	else if(this._gloryBattle_guestSatisfaction < 0) {
-		let addRep = -1;
+		let addRep = -0;
 		if(Math.randomInt(100) < this._gloryBattle_guestSatisfaction * -1) addRep--;
 		this.increaseGloryReputation(addRep);
 	}

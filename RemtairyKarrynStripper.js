@@ -158,13 +158,13 @@ Game_Party.prototype.postStripperBattleCleanup  = function() {
 	this._stripperBattle_intermissionPhase = false;
 	
 	if(this._stripperBattle_patronSatisfaction > 0) {
-		let addRep = 1;
+		let addRep = 10;
 		if($gameParty._stripClubReputation <= 20 && Math.randomInt(100) < this._stripperBattle_patronSatisfaction) addRep++;
 		this.increaseStripClubReputation(addRep);
 		$gameSwitches.setValue(SWITCH_TODAY_STRIPPER_REP_UP_ID, true);
 	}
 	else if(this._stripperBattle_patronSatisfaction < 0) {
-		let addRep = -1;
+		let addRep = -0;
 		if(Math.randomInt(100) < this._stripperBattle_patronSatisfaction * -1) addRep--;
 		this.increaseStripClubReputation(addRep);
 		this._prisonLevelThreeRiotBuildup += $gameParty._stripClubReputation;

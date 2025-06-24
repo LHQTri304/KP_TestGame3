@@ -257,13 +257,13 @@ Game_Party.prototype.postTrainerBattleCleanup = function() {
 	
 
 	if(this._trainerBattle_gymGoerSatisfaction > 0) {
-		let addRep = 1;
+		let addRep = 10;
 		if($gameParty._gymReputation <= 20 && Math.randomInt(100) < this._trainerBattle_gymGoerSatisfaction) addRep++;
 		this.increaseGymReputation(addRep);
 		$gameSwitches.setValue(SWITCH_TODAY_TRAINER_REP_UP_ID, true);
 	}
 	else if(this._trainerBattle_gymGoerSatisfaction < 0) {
-		let addRep = -1;
+		let addRep = -0;
 		if(Math.randomInt(100) < this._trainerBattle_gymGoerSatisfaction * -1) addRep--;
 		this.increaseGymReputation(addRep);
 	}
